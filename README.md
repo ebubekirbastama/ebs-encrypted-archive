@@ -128,12 +128,7 @@
 
 <hr />
 
-<h2>🧑‍💻 Yazar</h2>
 
-<p><strong>ebubekir bastama</strong> (ebs)<br />
-<a href="https://github.com/ebubekirbastama">GitHub Profiliniz</a></p>
-
-<hr />
 
 <h2>💬 İletişim</h2>
 
