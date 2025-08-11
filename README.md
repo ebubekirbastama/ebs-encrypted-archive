@@ -1,140 +1,127 @@
-<h1>🚀 ebs-encrypted-archive</h1>
+# 🚀 ebs-encrypted-archive
 
 <img src="ebs.png" alt="ebs ekran görüntüsü" />
 
-<p><strong>ebs-encrypted-archive</strong>, güçlü ve kolay kullanımlı bir <strong>şifreli dosya paketleyici</strong>dir. Python ve PySide6 ile geliştirilmiş olup, Argon2 tabanlı anahtar türetme ve AES-GCM ile güvenli şifreleme sağlar. Dosya ve klasörleri güvenli şekilde paketleyip, parola korumalı olarak arşivler.</p>
+**ebs-encrypted-archive**, güçlü ve kolay kullanımlı bir **şifreli dosya paketleyici**dir.  
+Python ve PySide6 ile geliştirilmiş olup, **Argon2** tabanlı anahtar türetme ve **AES-GCM** ile güvenli şifreleme sağlar.  
+Dosya ve klasörleri güvenli şekilde paketleyip, parola korumalı olarak arşivler.
 
-<hr />
+---
 
-<h2>📦 Nedir? Ne İşe Yarar?</h2>
+## 📦 Nedir? Ne İşe Yarar?
 
-<p><code>ebs-encrypted-archive</code>, dosya ve klasörlerinizi tek bir şifreli paket halinde toplamanıza ve güvenle saklamanıza olanak verir. Böylece:</p>
+`ebs-encrypted-archive`, dosya ve klasörlerinizi tek bir şifreli paket halinde toplamanıza ve güvenle saklamanıza olanak verir. Böylece:
 
-<ul>
-<li>Dosyalarınızın gizliliğini korur.</li>
-<li>Parola olmadan içeriklere erişilemez.</li>
-<li>Çok büyük dosyaları parçalar halinde şifreler.</li>
-<li>Güçlü Argon2 ile anahtar türetme ile parola güvenliğini artırır.</li>
-<li>AES-GCM algoritması ile hem şifreler hem veri bütünlüğünü sağlar.</li>
-</ul>
+- Dosyalarınızın gizliliğini korur.
+- Parola olmadan içeriklere erişilemez.
+- Çok büyük dosyaları parçalar halinde şifreler.
+- Güçlü Argon2 ile anahtar türetme ile parola güvenliğini artırır.
+- AES-GCM algoritması ile hem şifreler hem veri bütünlüğünü sağlar.
 
-<hr />
+---
 
-<h2>⚙️ Özellikler</h2>
+## ⚙️ Özellikler
 
-<ul>
-<li>Dosya ve klasör bazlı paketleme (alt klasörler dahil).</li>
-<li>Parola ile güçlü şifreleme (Argon2 + AES-GCM).</li>
-<li>Paket içeriğini listeleme.</li>
-<li>Paketi şifreli şekilde çıkarma.</li>
-<li>Çoklu dosya ve büyük dosya desteği (chunk bazlı).</li>
-<li>GUI tabanlı kolay kullanım (PySide6).</li>
-<li>İşlem sırasında arayüz donmasını önleyen thread yapısı.</li>
-<li>Parola girişinde gizlilik (şifre maskelenir).</li>
-<li>Argon2 parametrelerinin (zaman, bellek, paralellik) ayarlanabilmesi.</li>
-<li>Platformlar arası uyumluluk (Windows, Linux, macOS).</li>
-</ul>
+- Dosya ve klasör bazlı paketleme (alt klasörler dahil).
+- Parola ile güçlü şifreleme (**Argon2 + AES-GCM**).
+- Paket içeriğini listeleme.
+- Paketi şifreli şekilde çıkarma.
+- Çoklu dosya ve büyük dosya desteği (chunk bazlı).
+- GUI tabanlı kolay kullanım (PySide6).
+- İşlem sırasında arayüz donmasını önleyen thread yapısı.
+- Parola girişinde gizlilik (şifre maskelenir).
+- Argon2 parametrelerinin (zaman, bellek, paralellik) ayarlanabilmesi.
+- Platformlar arası uyumluluk (Windows, Linux, macOS).
 
-<hr />
+---
 
-<h2>💻 Desteklenen İşletim Sistemleri</h2>
+## 💻 Desteklenen İşletim Sistemleri
 
-<ul>
-<li>Windows 10 ve üstü</li>
-<li>Linux dağıtımları (Ubuntu, Fedora, Debian, vs.)</li>
-<li>macOS (modern sürümler)</li>
-</ul>
+- Windows 10 ve üstü
+- Linux dağıtımları (Ubuntu, Fedora, Debian, vs.)
+- macOS (modern sürümler)
 
-<hr />
+---
 
-<h2>📸 Ekran Görüntüsü</h2>
+## 📸 Ekran Görüntüsü
 
 <img src="ebs.png" alt="Ekran Görüntüsü" />
 
-<hr />
+---
 
-<h2>🚀 Kurulum</h2>
+## 🚀 Kurulum
 
-<ol>
-<li><strong>Python 3.9 veya üzeri</strong> kurulu olduğundan emin olun.</li>
-<li>Gerekli bağımlılıkları yükleyin:</li>
-</ol>
+1. **Python 3.9 veya üzeri** kurulu olduğundan emin olun.
+2. Gerekli bağımlılıkları yükleyin:
+   ```bash
+   pip install PySide6 cryptography argon2-cffi
+   ```
 
-<pre><code>pip install PySide6 cryptography argon2-cffi
-</code></pre>
+---
 
-<hr />
+## 🛠️ Kullanım
 
-<h2>🛠️ Kullanım</h2>
+### Programı çalıştırmak için:
+```bash
+python ebs_secure_pack.py
+```
 
-<h3>Programı çalıştırmak için:</h3>
+### Uygulamayı tek dosya olarak derlemek için:
+```bash
+pyinstaller --onefile --noconsole ebs_secure_pack.py
+```
 
-<pre><code>python ebs_secure_pack.py
-</code></pre>
+### Özellikler:
+- **Dosya Ekle:** Paketlemek istediğiniz dosyaları seçin.
+- **Klasör Ekle:** Alt klasörler dahil tüm dosyaları seçilen klasörden ekleyin.
+- **Paket Oluştur:** Seçilen dosyaları parola ile şifreleyip tek bir `.encpack` dosyası oluşturur.
+- **Paketi Listele:** Var olan `.encpack` dosyasının içeriğini görüntüler.
+- **Paketi Çıkar:** Parola girerek şifreli paketi belirtilen klasöre açar.
 
-<h3>Özellikler:</h3>
+---
 
-<ul>
-<li><strong>Dosya Ekle:</strong> Paketlemek istediğiniz dosyaları seçin.</li>
-<li><strong>Klasör Ekle:</strong> Alt klasörler dahil tüm dosyaları seçilen klasörden ekleyin.</li>
-<li><strong>Paket Oluştur:</strong> Seçilen dosyaları parola ile şifreleyip tek bir <code>.encpack</code> dosyası oluşturur.</li>
-<li><strong>Paketi Listele:</strong> Var olan <code>.encpack</code> dosyasının içeriğini görüntüler.</li>
-<li><strong>Paketi Çıkar:</strong> Parola girerek şifreli paketi belirtilen klasöre açar.</li>
-</ul>
+## ⚙️ Argon2 Parametreleri Açıklaması
 
-<hr />
+- **Zaman Maliyeti (time_cost):** Hesaplama kaç kere yapılacak (daha yüksek → daha güvenli ve yavaş).
+- **Bellek Maliyeti (memory_cost):** Kullanılacak bellek miktarı (KiB cinsinden, yüksek değer → daha güvenli).
+- **Paralellik (parallelism):** Paralel iş parçacığı sayısı (çok çekirdekli işlemciler için optimize).
 
-<h2>⚙️ Argon2 Parametreleri Açıklaması</h2>
+> Varsayılan değerler performans ve güvenlik arasında iyi bir denge sağlar.
 
-<ul>
-<li><strong>Zaman Maliyeti (time_cost):</strong> Hesaplama kaç kere yapılacak (daha yüksek → daha güvenli ve yavaş).</li>
-<li><strong>Bellek Maliyeti (memory_cost):</strong> Kullanılacak bellek miktarı (KiB cinsinden, yüksek değer → daha güvenli).</li>
-<li><strong>Paralellik (parallelism):</strong> Paralel iş parçacığı sayısı (çok çekirdekli işlemciler için optimize).</li>
-</ul>
+---
 
-<p>Varsayılan değerler performans ve güvenlik arasında iyi bir denge sağlar.</p>
+## 🔒 Güvenlik Avantajları
 
-<hr />
+- **Güçlü parola tabanlı anahtar türetme:** Argon2 ID tipi ile parola kırılmaya karşı dayanıklıdır.
+- **AES-GCM:** Hem şifreleme hem veri bütünlüğü sağlar (veri değiştirilirse açma işlemi başarısız olur).
+- **Her dosya için benzersiz nonce:** Tekrarlanan saldırılara karşı direnç.
+- **Chunk tabanlı şifreleme:** Büyük dosyaların güvenli ve etkili paketlenmesi.
+- **Parola olmadan dosya içeriği tamamen gizli kalır.**
 
-<h2>🔒 Güvenlik Avantajları</h2>
+---
 
-<ul>
-<li><strong>Güçlü parola tabanlı anahtar türetme:</strong> Argon2 ID tipi ile parola kırılmaya karşı dayanıklıdır.</li>
-<li><strong>AES-GCM:</strong> Hem şifreleme hem veri bütünlüğü sağlar (veri değiştirilirse açma işlemi başarısız olur).</li>
-<li><strong>Her dosya için benzersiz nonce (ilk vektör):</strong> Tekrarlanan saldırılara karşı direnç.</li>
-<li><strong>Chunk tabanlı şifreleme:</strong> Büyük dosyaların güvenli ve etkili paketlenmesi.</li>
-<li><strong>Parola olmadan dosya içeriği tamamen gizli kalır.</strong></li>
-</ul>
+## 📄 Lisans
 
-<hr />
+Bu proje **Apache License 2.0** ile lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
 
-<h2>📄 Lisans</h2>
+---
 
-<p>Bu proje <strong>Apache License 2.0</strong> ile lisanslanmıştır. Daha fazla bilgi için <code>LICENSE</code> dosyasına bakabilirsiniz.</p>
+## 🤝 Katkıda Bulunma
 
-<hr />
+Katkılarınızı memnuniyetle karşılarız! İsterseniz:
 
-<h2>🤝 Katkıda Bulunma</h2>
+- Hata bildirimi,
+- Yeni özellik önerisi,
+- Kod geliştirme
 
-<p>Katkılarınızı memnuniyetle karşılarız! İsterseniz:</p>
+yapabilirsiniz.
 
-<ul>
-<li>Hata bildirimi,</li>
-<li>Yeni özellik önerisi,</li>
-<li>Kod geliştirme</li>
-</ul>
+---
 
-<p>yapabilirsiniz. </p>
+## 💬 İletişim
 
-<hr />
+Sorularınız için [EBSMail Adresi](mailto:ebubekiryazilim@gmail.com) adresinden bana ulaşabilirsiniz.
 
+---
 
-
-<h2>💬 İletişim</h2>
-
-<p>Sorularınız için <a href="mailto:ebubekiryazilim@gmail.com">EBSMail Adresi</a> adresinden bana ulaşabilirsiniz.</p>
-
-<hr />
-
-<p>⭐️ Eğer bu projeyi faydalı bulduysanız, bir ⭐ bırakmayı unutmayın!</p>
-
+⭐️ Eğer bu projeyi faydalı bulduysanız, bir ⭐ bırakmayı unutmayın!
